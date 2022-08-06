@@ -133,6 +133,10 @@ body{
     transition: all ease 0.5s;
 }
 
+.barra div .valor:hover{
+    background-color: hsl(25, 47%, 15%);
+}
+
 .conteiner--barra:nth-of-type(1) .valor{
     border-left: none;
 }
