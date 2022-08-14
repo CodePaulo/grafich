@@ -19,7 +19,7 @@ async function inputValue(){
     const qtdaysMonth = actualDate.getDate()
 
     //pegando o dia atual a partir da const date, deixei como let porquê irei alterar esse valor
-    let actualDay = date.getDay()
+    const actualDay = date.getDay()
     //iniciadndo o faturamento mensal em 0
     let balanceMonth = 0
 
@@ -31,9 +31,9 @@ async function inputValue(){
         balanceMonth += item.amount
 
         //filtrando somente os dias
-        let days = []
+        const days = []
         //filtrando somente os valores faturados
-        let values = []
+        const values = []
         
         //filtrando os dados recebidos
         response.map(item => {
@@ -97,7 +97,7 @@ async function inputValue(){
     })
 
     //projetando o balancete do ano com base no faturamento da semana
-    let balanceTotal = balanceMonth * (365 / 7)
+    const balanceTotal = balanceMonth * (365 / 7)
     //projetando o faturamento mensal com base no faturamento da semana
     balanceMonth = balanceMonth * (qtdaysMonth / 7)
 
