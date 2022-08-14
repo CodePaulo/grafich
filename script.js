@@ -100,14 +100,10 @@ async function inputValue(){
     const balanceTotal = balanceMonth * (365 / 7)
     //projetando o faturamento mensal com base no faturamento da semana
     balanceMonth = balanceMonth * (qtdaysMonth / 7)
-
-    //criando o efeito de contagem do balancente e do faturamento do mês
-    for(let i = 0; i < 1000; i++){
-        setTimeout(() => {
-            queryOne('.valor--faturamento').innerHTML = moneyFormat(i * (balanceMonth / 1999))
-            queryOne('.conteiner--balancete span').innerHTML = moneyFormat(i * (balanceTotal / 1999))
-        });
-    }
+    
+    //inputando os valores do balancete mensal e total
+    queryOne('.valor--faturamento').innerHTML = moneyFormat(balanceMonth)
+    queryOne('.conteiner--balancete span').innerHTML = moneyFormat(balanceTotal)
 }
 
 inputValue()
