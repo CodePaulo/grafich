@@ -61,7 +61,7 @@ async function inputValue(){
             case 6:
                 actualDay = 'sat'
                 break
-            case 7:
+            case 0:
                 actualDay = 'sun'
                 break
         }
