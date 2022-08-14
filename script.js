@@ -19,7 +19,7 @@ async function inputValue(){
     const qtdaysMonth = actualDate.getDate()
 
     //pegando o dia atual a partir da const date, deixei como let porquê irei alterar esse valor
-    let actualDay = date.getDate()
+    let actualDay = date.getDay()
     //iniciadndo o faturamento mensal em 0
     let balanceMonth = 0
 
@@ -102,11 +102,11 @@ async function inputValue(){
     balanceMonth = balanceMonth * (qtdaysMonth / 7)
 
     //criando o efeito de contagem do balancente e do faturamento do mês
-    for(let i = 0; i < 2000; i++){
+    for(let i = 0; i < 1000; i++){
         setTimeout(() => {
             queryOne('.valor--faturamento').innerHTML = moneyFormat(i * (balanceMonth / 1999))
             queryOne('.conteiner--balancete span').innerHTML = moneyFormat(i * (balanceTotal / 1999))
-        }, 0);
+        });
     }
 }
 
