@@ -15,10 +15,10 @@ async function inputValue(){
     const date = new Date()
     //criando a data atual para pegar a quantidade de dias do mês atual
     const actualDate = new Date(date.getFullYear(), date.getMonth(), 0)
-    //pegando a quantidade de duas do mês atual para fazer o calculo do faturamento mensal
+    //pegando a quantidade de dias do mês atual para fazer o calculo do faturamento mensal
     const qtdaysMonth = actualDate.getDate()
 
-    //pegando o dia atual a partir da const date, deixei como let porquê irei alterar esse valor
+    //pegando o dia atual a partir da const date. Deixei minha actualDay como let porquê irei alterar esse valor
     let actualDay = date.getDay()
     //iniciadndo o faturamento mensal em 0
     let balanceMonth = 0
@@ -71,7 +71,7 @@ async function inputValue(){
             modelsGraphic.querySelector('.barra div').classList.add('dia--atual')
         }
 
-        //calculando qual o valor de cada barra do gráfico
+        //calculando qual o tamanho de cada barra do gráfico
         let graphicLength = `${(item.amount * 100) / Math.max(...values)}%`
 
         //inserindo os valores e os dias dinamicamente no gráfico
