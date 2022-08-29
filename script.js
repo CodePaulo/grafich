@@ -9,10 +9,10 @@ async function dados(){
 }
 
 async function iniciar(){
-    const Dados = await dados()
+    const informacoes = await dados()
     const tamanhos = await tamanhoDasBarras()
 
-    Dados.forEach((item, indice) => {
+    informacoes.forEach((item, indice) => {
         const modelo = document.querySelector('.modelos .conteiner-barra-e-dia').cloneNode(true)
 
         setTimeout(()=> {
@@ -42,10 +42,10 @@ async function iniciar(){
 iniciar()
 
 async function faturamentoDiario(){
-    const Dados = await dados()
+    const iformacoes = await dados()
     const faturamento = []
 
-    Dados.map(item => {
+    iformacoes.map(item => {
         faturamento.push(item.amount)
     })
 
